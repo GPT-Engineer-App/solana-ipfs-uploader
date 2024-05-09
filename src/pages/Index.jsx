@@ -19,17 +19,11 @@ const Index = () => {
     }
   };
 
-  const connectWallet = () => {
-    toast({
-      title: "Wallet Connected",
-      description: "Simulated wallet connection successful.",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-  };
+  // This function should integrate with a Solana wallet provider like Phantom
 
-  const uploadToIPFS = () => {
+  const connectWallet = async () => {};
+
+  const uploadToIPFS = async () => {
     if (!file) {
       toast({
         title: "No file selected",
@@ -40,17 +34,6 @@ const Index = () => {
       });
       return;
     }
-
-    toast({
-      title: "File Uploaded",
-      description: "Simulated upload to IPFS successful.",
-      status: "success",
-      duration: 3000,
-      isClosable: true,
-    });
-
-    // Simulate storing hash on Solana
-    storeHashOnSolana("Qm...fakeHash");
   };
 
   const storeHashOnSolana = (hash) => {
